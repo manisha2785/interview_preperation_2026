@@ -1,0 +1,1635 @@
+study material
+https://www.youtube.com/watch?v=sXohJ3pYAfI&t=22s
+
+
+
+
+prompt 
+I am preparing for a senior/10+ years experience interview.
+
+I will give you a list of interview questions, screenshots, notes, or a file. **Use my provided list as the primary source. Do not replace it with a generic question list.**
+
+For every question:
+
+1. Keep the **original question wording** as much as possible.
+2. Mention the **company name** if it is available in my source. Do not invent a company name.
+3. Give me an answer that sounds like a **genuine 10+ years experienced engineer**, not a fresher or 2–4 year candidate.
+4. Make the answer **easy to remember and speak naturally in an interview**—around 45–90 seconds for important questions.
+5. Don't give only textbook definitions. Use this structure where relevant:
+
+   * What it is
+   * How it works
+   * When I use it
+   * Practical/production scenario
+   * Trade-off or limitation
+   * How I would debug/design it as a senior engineer
+6. Add a **⭐ Standout point** after each important answer: one practical/senior-level point that can differentiate me from another candidate.
+7. Prefer **realistic production problems and troubleshooting examples** over artificial examples.
+8. Do not claim that I personally did something if my source does not support it. If a practical example is needed, clearly phrase it as “I would approach it…” or “A production scenario would be…”
+9. For coding questions, give:
+
+   * clean interview-ready solution
+   * explanation
+   * time/space complexity when relevant
+   * one senior-level consideration or alternative approach
+10. For React questions, pay special attention to:
+
+* rendering and re-rendering
+* Fiber/reconciliation
+* Profiler
+* React.memo
+* useMemo/useCallback
+* useEffect/useLayoutEffect
+* useRef
+* Context
+* Redux/useSelector/useDispatch
+* performance
+* large datasets/virtualization
+* API handling
+* architecture/microfrontends
+* production debugging
+
+11. If my list contains duplicate or similar questions, combine them intelligently but **don't lose any unique concept or company-specific question**.
+12. At the end, categorize the questions:
+    🔴 MUST KNOW — highest interview priority
+    🟠 IMPORTANT — likely follow-up/senior-level
+    🟢 GOOD TO KNOW — lower priority
+13. Tell me if any question from my original list was not covered.
+14. Keep the language simple and conversational because I need to **speak the answer**, not write an academic exam.
+15. Avoid overcomplicated terminology unless it is important for a senior interview.
+16. If the source does not contain enough information for an answer, say so instead of silently inventing source-specific facts. You may add general technical knowledge, but clearly distinguish it from the source.
+
+**Most important:** I want answers that make the interviewer feel:
+“She's not just memorizing React definitions; she has actually worked on complex applications, understands trade-offs, and knows how to troubleshoot production problems.”
+
+Do NOT make the answers artificially long. Make them **senior, practical, confident, easy to remember, and defensible in follow-up questions.**
+
+
+
+
+
+
+
+
+
+---------------------
+
+
+lti mindtree
+
+
+class logCalls implement httpItntrecetor()
+{
+
+   intercept(request:HttpRequedt,next:httpRequestHandler)
+   {
+          var params={token="123"}
+          obj= request.add(params);
+          return request.next(obj)
+
+   }
+
+}
+---
+<div *ngfor  track by index>
+
+  
+</div>
+
+-----
+
+signal =new signal();
+
+-----
+a 
+b
+
+A=new subjet()
+A.next(1);
+
+
+A.subsribe((data)=>{
+   
+})
+
+-------------------
+1. how track by different than for loop 
+  does it update dom
+2. what the thing in packge.json which we can exclude at the time of dependency
+
+3. how to switch anguakr 14 ro angular 17 layer by layer
+4. in which case we use singan and hwne to use observable(if out application has rxjs and we want to integare signal what we will use)
+5. code for intercptop to add logs
+6. code to write signal and subject
+7. if i have 1000 minine of user in which cas which optimization texhnique u will used 
+8. how to pass data with unrelated coponenet in subject
+
+-------------- 
+pyhton+angualt
+
+ 
+1. write a geneartor function in python that return average of every service
+  logs={
+[1,"authentication",123],
+[2,"payment",212],
+[3,"transaction",212],
+
+} 
+
+2. write a utiliy function in angular /java script
+3. write a service that call an api it will not give duplicate data cancel that api if user type some thing else  
+4. 
+  a={
+    user:"anc"
+  } 
+  cost c=a
+  c.user=cda
+  what will be the value of a.user 
+  will it trigger in on push which line will trigger in on push 
+  what shd we do in pn push so it will trigger that ponpush
+5. a=[1,2,3,4]  
+   const result=a.nums((num)={
+   if(num>1){
+        return num*num
+   }
+})
+   
+console.log(result)
+what will be the output of this
+------------------------
+on push cunge samjo kese deal krta 
+demo bna do clik pn poush bina kese mark for check detect chec
+jp phle puchta h vo 
+cross question 
+----------
+Input: "Hi my name is abc"
+Output: "iH ym eman si cba"
+
+pure and impure pipe
+stand alone and simple module
+difference between ng module and component
+life cycle hook
+which life cycle hook does not support directive
+----------  
+mphasis(23-6-26)
+
+what is heloziation
+what is llm 
+how to ingrated any open api
+how to reduce bundle size in react
+performance optozation in react
+----------
+BMW
+
+1. what is current version of react how it different from previous version
+2. what is contect api why we using it
+3. what is use effect and what is use layout effect
+4. real time exam of contect api
+5. what is reduc
+6. we can do pop drilling then why we using context api
+7. hydration
+8. profiler 
+
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+const fn = outer();
+fn();
+fn();
+fn();
+ 
+what will be the output of above
+
+function Parent() {
+  const [count, setCount] = useState(0);
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+      <Child />
+    </>
+  );
+}
+function Child() {
+  console.log("Child Render");
+  return <div>Child</div>;
+}
+ 
+
+will childe render will trigger or not what will you do nto to trigegrs
+
+pyhton
+
+what is solid principle
+how you review PR give me measureable answer so it will not break
+eberthign arounf you is object or class
+create a class whoch as object around you
+in an ecpmmerce app if i have 100 item but request coming for 150 for the how you will handel
+
+---------------------
+
+BMW
+### Candidate Overview
+
+- Manisha Gupta, full stack developer with experience across Citibank, Cisco, Fujitsu, Intermedia
+- Current client: Scope (via Beforelimited); also handles team lead responsibilities
+- Domains: e-commerce, networking/router-switches, 5G (Samsung)
+- Stack: React, Node.js, Python (limited), PHP (prior); 70% frontend, 30% backend split
+
+### React and Frontend Assessment
+
+- React version: stated 19 as latest; could not elaborate on specific new features
+  - Mentioned hydration improvements and performance gains but without detail
+  - Could not explain React Fiber or Profiler
+- Context API: understood basic concept (avoid prop drilling, share state globally)
+  - Gave theme-switching as a real-world example
+  - Differentiated from Redux: context for simpler apps, Redux for complex state
+- Redux: familiar with the action/dispatch/reducer/store flow
+  - Could not name useDispatch hook when prompted
+  - Not using Redux currently; project still on prop drilling, migration in progress
+- useLayoutEffect: no answer provided
+- Code snippet (closure/counter output): answered correctly after hesitation
+- Re-render prevention: suggested useCallback but reasoning was unclear
+
+### Backend and Python Assessment
+
+- Most comfortable with Node.js; Python described as “little bit only”
+- SOLID principles: not familiar
+- Code quality practices described in general terms (PR review, Copilot, simplifying verbose code)
+  - Could not articulate measurable standards or testing practices when pressed
+- Concurrency/inventory scenario (100 requests, 15 iPhones in stock):
+  - Initial answer: query stock before order creation
+  - Could not address race conditions or transaction locking in a distributed/microservices environment
+- Databases: MySQL, PostgreSQL; learning MongoDB
+
+### OOP and Class Design Exercise
+
+- Asked to write a class (any language except JS; chose Python-style)
+- Wrote a Room class with furniture attributes
+- Code review feedback given by interviewer:
+  - Hardcoded values flagged; Manisha suggested moving to constants
+  - Interviewer challenged: constants don’t work across multiple instances of the same class
+  - Manisha eventually suggested passing values as constructor parameters (polymorphism reference)
+  - Struggled to articulate where initialization belongs vs. method arguments
+
+### Overall Impression
+
+- Frontend knowledge is surface-level; gaps in React internals (Fiber, hooks, rendering)
+- Backend and Python exposure is limited
+- OOP fundamentals are weak; needed significant prompting to reach constructor-based design
+- Communication was unclear at times; answers often trailed off or lacked precision
+- No questions asked by candidate at close
+
+---
+
+Chat with meeting transcript: https://notes.granola.ai/t/9042f0aa-735b-4e6c-8c2c-2e2beb35d882
+------
+
+
+
+------------------------------------------------
+denstu
+ 
+const Child = React.memo(() => {
+
+  console.log("Child Render");
+
+  return <div>Hello</div>;
+
+});
+ 
+function Parent() {
+
+  const [count, setCount] = useState(0);
+ 
+  return (
+<>
+<button onClick={() => setCount(count + 1)}>Increment</button>
+<Child />
+</>
+
+  );
+
+}
+
+ 
+<Child name="Manisha" />
+ 
+<Child name={name: "Deepak"} />
+ 
+add() - 1
+add() - 2
+add() - 3
+ 
+ [1,2,3,4,5].myForEach((el) => console.log(el))
+ 
+ 
+funcs = []
+ 
+for i in range(3):
+ 
+   funcs.append(lambda: i)
+ 
+ 
+for f in funcs:
+ 
+   print(f())
+
+ 
+
+
+class BankAccount:
+
+  transaction_history = [] 
+
+   def __init__(self, owner, initial_balance=0):
+
+      self.owner = owner
+
+      self.balance = initial_balance
+
+   def deposit(self, amount):
+
+      if amount <= 0:
+
+          raise ValueError("Deposit must be positive")
+
+      self.balance += amount
+
+      self.transaction_history.append(f"Deposit: {amount}")
+
+   def withdraw(self, amount):
+
+      self.balance -= amount
+
+      self.transaction_history.append(f"Withdrawal: {amount}")
+
+   def get_statement(self):
+
+      return self.transaction_history
+
+# --- Test Case ---
+
+acc1 = BankAccount("Alice", 100)
+
+acc1.deposit(50)
+
+acc2 = BankAccount("Bob", 200)
+
+acc2.withdraw(50)
+
+print(f"Alice's History: {acc1.get_statement()}")
+
+print(f"Bob's History: {acc2.get_statement()}")
+ 
+
+ what is error in above code
+python
+
+1. what is init
+2. different between list and array
+3. how to append some itme in array
+
+
+- Code Scenario 1:
+  Look at this basic setup:
+  
+  const Child = React.memo(() => {
+      console.log("Child Render");
+      return <div>Hello</div>;
+  });
+
+  If a parent component holds a counter state and renders this <Child /> with no props, does the child component re-render when the parent counter increments?
+
+- Code Scenario 2:
+  If you change the parent to pass a primitive prop like this:
+  
+  <Child name="Manisha" />
+  
+  Will the child component re-render when the parent counter increments?
+
+- Code Scenario 3:
+  What if you pass an object inline directly as a prop like this:
+  
+  <Child name={{ name: "Deepak" }} />
+  
+  Will it re-render now every time the parent counter increments?
+
+- Code Scenario 4 (Scope Puzzle):
+  Look at this block of Python code:
+  
+  funcs = []
+  for i in range(3):
+      funcs.append(lambda: i)
+  for f in funcs:
+      print(f())
+      
+  What will this block of code print out when executed?
+
+[Debugging Challenge]
+- Code Scenario 5 (Code Review):
+  Look at this implementation of a withdraw method inside a BankAccount class:
+  
+  def withdraw(self, amount):
+      self.balance -= amount
+      self.transaction_history.append(f"Withdrawal: {amount}")
+      
+  What is the logical bug or error in the above Python code? What critical checks are missing?
+
+
+
+java scritp
+1. write a program in js to increase the value
+   counter will increase
+2. make a sample function like foreach 
+3. 
+
+react 
+whill child render if i will change the 
+passing value and passing object
+when to use stire and when to use redux
+
+pthon 
+init in python 
+array list
+how to append
+
+
+Here is the completely detailed, line-by-line list of **every technical question, code-based puzzle, and behavioral prompt** from your interview. This includes the precise scenarios based on the code snippets visible on your screen during the call:
+### ⚛️ Part 1: React & Frontend Architecture
+#### **Vite vs. Webpack**
+ 1. "What is the difference between Webpack and Vite?"
+ 2. "But how is Vite much faster than Webpack?"
+ 3. "What is that modern frontend architecture? What is the 'why' part here?" *(Follow-up regarding native ES Modules).*
+#### **Micro-Frontends**
+ 4. "What is Module Federation in a micro-frontend architecture?"
+#### **State Management (Redux vs. Context API)**
+ 5. "In React, what is the difference between Redux and Context API? Which one should we use, and which have you used for store/state management?"
+ 6. "We can store large data sets in Context API as well. Is there any specific reason *not* to do so?" *(Follow-up on Context re-rendering limitations).*
+ 7. "In terms of Redux, is the data flow synchronous or asynchronous?"
+ 8. "If I am updating a component, how does the data change traverse through Redux to update the UI?"
+ 9. "Can you explain the exact relationship between a dispatch, an action, a middleware, a reducer, and the store?"
+#### **Performance Optimization & Code Evaluation**
+ 10. "What is React.memo and how does it help with performance?"
+ 11. **[Code Analysis - File 70f63061-76f9-408b-9564-f4cc0736e91a]:**
+   "Look at this basic setup:
+   ```javascript
+   const Child = React.memo(() => {
+       console.log("Child Render");
+       return <div>Hello</div>;
+   });
+   
+   ```
+   If I click on the Increment button in the Parent component, does the <Child/> component re-render?"
+ 12. **[Code Analysis - File 20604a70-2b64-4298-8da5-befb9807d019]:**
+   "Now, look at the top of the next file. If I change the implementation to:
+   ```javascript
+   <Child name="Manisha" />
+   
+   ```
+   Will it re-render when the parent counter increments?"
+ 13. **[Code Analysis - File 20604a70-2b64-4298-8da5-befb9807d019]:**
+   "What if I pass an object directly as a prop like this:
+   ```javascript
+   <Child name={{name: "Deepak"}} />
+   
+   ```
+   Will it re-render now?"
+ 14. "What is the difference between shallow cloning and deep cloning in JavaScript objects?"
+ 15. "Can you explain what the Virtual DOM is in React?"
+ 16. "During reconciliation, what does the Virtual DOM compare itself to? Does it compare with the Real DOM or a previous Virtual DOM tree?"
+ 17. "If it has to diff changes, how is it performant enough to avoid lagging the UI?"
+ 18. "Is setState synchronous or asynchronous in React?"
+#### **Testing & Framework Comparison**
+ 19. "Have you done any unit testing or automation testing in React? What tools have you used (Cypress, Jasmine, Karma)?"
+ 20. "Since you have strong experience in Angular as well, what is the core structural difference between Angular and React?"
+ 21. "According to your engineering judgment, how do you choose which framework to use for a brand-new project?"
+### 🐍 Part 2: Python & Object-Oriented Programming (OOP)
+#### **Core Language Mechanics**
+ 22. **[Code Analysis - File c8267508-c2a5-4c9b-84a0-ce7ebcdf2b1c]:**
+   "Look at the bottom questions list on the screen. First, what is init (meaning __init__) in Python?"
+ 23. "Initializing for what? What exactly is it initializing inside a class?"
+ 24. "What are decorators in Python and how do they function?"
+ 25. "How do you copy an object in Python?"
+ 26. "What specific built-in command or module do you use to clone an object?"
+ 27. **[Code Analysis - File c8267508-c2a5-4c9b-84a0-ce7ebcdf2b1c]:**
+   "Question 2 on your screen: What is the basic technical difference between a list and an array in Python?"
+ 28. **[Code Analysis - File c8267508-c2a5-4c9b-84a0-ce7ebcdf2b1c]:**
+   "Question 3 on your screen: If you want to add an item to an array, how do you do that? What is the exact syntax?"
+ 29. "How do you delete a file from local or cloud storage using Python code?"
+#### **Advanced OOP & Scope Puzzles**
+ 30. "Does Python natively support multiple inheritance?"
+ 31. "Can you explain what multiple inheritance is and what conflicts can arise from it?"
+ 32. "What is polymorphism in Python? Give an example."
+ 33. **[Code Analysis - File 20604a70-2b64-4298-8da5-befb9807d019]:**
+   "Look at this closure/lambda scope puzzle on the screen:
+   ```python
+   funcs = []
+   for i in range(3):
+       funcs.append(lambda: i)
+   for f in funcs:
+       print(f())
+   
+   ```
+   What will this block of code print out when executed?"
+#### **Debugging & Code Review Challenge**
+ 34. **[Code Analysis - Files 0e28b21e-f3cb-4a12-8ccf-ff9c7bc65f74 & c8267508-c2a5-4c9b-84a0-ce7ebcdf2b1c]:**
+   "Review the full implementation of the BankAccount class across these files. Look closely at the withdraw method:
+   ```python
+   def withdraw(self, amount):
+       self.balance -= amount
+       self.transaction_history.append(f"Withdrawal: {amount}")
+   
+   ```
+   What is the logical bug or error in the above Python code? What safeguards are missing?"
+### 🗄️ Part 3: Backend Architecture & Databases
+#### **API Design & Frameworks**
+ 35. "How do you create a REST API in Python? What HTTP methods do you map to Create, Read, Update, and Delete operations?"
+ 36. "For an Update versus a Delete operation, what specific HTTP verbs do you use?"
+ 37. "What are the structural differences between Flask and FastAPI?"
+ 38. "If you need to introduce versioning to your API endpoints, how do you design that?"
+ 39. "What exactly is API versioning achieving at the network level?"
+ 40. "How do you manage documentation for a Python API? If you are starting completely from scratch, how do you build and structure the documentation architecture?"
+#### **Database Optimization & Scalability**
+ 41. "Have you created database schemas? In database architecture, what is an index and how does it work under the hood?"
+ 42. "How do you approach optimizing a slow-running SQL or NoSQL database query?"
+ 43. **[System Design / Race Condition Scenario]:**
+   "Imagine an e-commerce application where there is exactly 1 item left in stock inside the database. Simultaneously, 100 users hit the 'Buy' button at the exact same millisecond. How do you design the system to handle this concurrency safely?"
+ 44. "What is a race condition, and how do database locks prevent them?"
+ 45. **[System Design / N+1 Query Scenario]:**
+   "You have two distinct database tables: Post and Comment. You need to build an endpoint that returns 10 posts, and each individual post must include its latest 5 comments in the payload. How do you design this efficiently?"
+ 46. "Should you use a loop in your backend code to query comments sequentially for each post?"
+ 47. "If you shouldn't use a loop to fetch the comments, what strategy or query structure must you implement to optimize data retrieval?"
+ 48. "What is a composite index in a database, and when would you use one?"
+### 🤖 Part 4: AI-Assisted Development & Workflows
+ 49. "You noted experience with AI-assisted development. What does that mean practically for your daily workflow?"
+ 50. "Are you interacting with tools like Claude via a standard web interface, or are you utilizing the Claude CLI or native IDE integrations?"
+ 51. "Have you created any customized workflows or 'Skills' within Claude? Are you familiar with what a command, a skill, or a plugin is in that ecosystem?"
+ 52. "What exactly constitutes an AI 'Skill' in your development workspace?"
+ 53. "If you encounter a tough bug in your workspace, how does a custom AI skill assist you in resolving it over a generic prompt?"
+ 54. "How is a structured AI skill fundamentally different from a standard manual Claude command?"
+ 55. "Have you built or implemented any custom plugins or Model Context Protocol (MCP) servers? Which ones are currently integrated into your setup?"
+------------------------------------
+Here are the questions asked in today's **Software Engineer Interview: Manisha**:
+
+1. **Event loop** in React/JavaScript — explain what it is.
+2. **Python middleware** — what kind of middleware have you written?
+3. **Restrict simultaneous logins** — how to allow only one active session per user (WhatsApp-style) in Python.
+4. **Rate limiting** — what it is, plus a coding task to build a FastAPI middleware limiting a user to 10 calls per 10 seconds on the `get_my_list` API, from scratch (no SlowAPI).
+5. create a middle ware manually for fast api
+---------------
+# L1 Interview || Manish Gupta for the role of Full stack developer (Python) - SWF
+
+Wed, 24 Jun 26 · bti_recruiting@peoplestrong.com, sheetal.ghadi@bmwtechworks.in
+
+### Candidate Overview
+
+- Manisha Gupta, full stack developer with experience across Citibank, Cisco, Fujitsu, Intermedia
+- Current client: Scope (via Beforelimited); also handles team lead responsibilities
+- Domains: e-commerce, networking/router-switches, 5G (Samsung)
+- Stack: React, Node.js, Python (limited), PHP (prior); 70% frontend, 30% backend split
+
+### React and Frontend Assessment
+
+- React version: stated 19 as latest; could not elaborate on specific new features
+  - Mentioned hydration improvements and performance gains but without detail
+  - Could not explain React Fiber or Profiler
+- Context API: understood basic concept (avoid prop drilling, share state globally)
+  - Gave theme-switching as a real-world example
+  - Differentiated from Redux: context for simpler apps, Redux for complex state
+- Redux: familiar with the action/dispatch/reducer/store flow
+  - Could not name useDispatch hook when prompted
+  - Not using Redux currently; project still on prop drilling, migration in progress
+- useLayoutEffect: no answer provided
+- Code snippet (closure/counter output): answered correctly after hesitation
+- Re-render prevention: suggested useCallback but reasoning was unclear
+
+### Backend and Python Assessment
+
+- Most comfortable with Node.js; Python described as “little bit only”
+- SOLID principles: not familiar
+- Code quality practices described in general terms (PR review, Copilot, simplifying verbose code)
+  - Could not articulate measurable standards or testing practices when pressed
+- Concurrency/inventory scenario (100 requests, 15 iPhones in stock):
+  - Initial answer: query stock before order creation
+  - Could not address race conditions or transaction locking in a distributed/microservices environment
+- Databases: MySQL, PostgreSQL; learning MongoDB
+
+### OOP and Class Design Exercise
+
+- Asked to write a class (any language except JS; chose Python-style)
+- Wrote a Room class with furniture attributes
+- Code review feedback given by interviewer:
+  - Hardcoded values flagged; Manisha suggested moving to constants
+  - Interviewer challenged: constants don’t work across multiple instances of the same class
+  - Manisha eventually suggested passing values as constructor parameters (polymorphism reference)
+  - Struggled to articulate where initialization belongs vs. method arguments
+
+### Overall Impression
+
+- Frontend knowledge is surface-level; gaps in React internals (Fiber, hooks, rendering)
+- Backend and Python exposure is limited
+- OOP fundamentals are weak; needed significant prompting to reach constructor-based design
+- Communication was unclear at times; answers often trailed off or lacked precision
+- No questions asked by candidate at close
+
+---
+react and node
+
+Intro & background
+
+Can you quickly introduce yourself — your project, technical skills, roles and responsibilities?
+What is your relevant experience in React? And in Node.js?
+In total, how many projects have you done in Node + React?
+Can you briefly explain your most recent project?
+React
+
+What's the difference between a single-page application and a multi-page application?
+What are the major advantages and disadvantages of React?
+Is React one-way or two-way data flow? Can you make it two-directional? Explain with an example.
+What's the difference between the real DOM and the virtual DOM?
+What's the difference between a functional component and a class component?
+Is a functional component stateless or stateful?
+What are the major lifecycle hooks you've used? Write the syntax with an example.->programming question
+Which hooks have you used (besides useState and useEffect)?
+What are the side effects of useEffect?
+Have you created custom hooks? What kind?
+Have you used Redux? Explain the full Redux flow with a real-world example.
+What's the difference between state and props?
+Are states mutable or immutable?
+What's the difference between actions and reducers?
+What's the difference between a controlled and uncontrolled component?
+What is an HOC (higher-order component)?
+Have you written test cases in React/Node? What do you use? (Cypress)
+Node.js
+
+What are the major advantages and disadvantages of Node.js?
+Have you used buffers and streams? What are the different types of streams?
+What is callback hell, and how do you avoid it?
+How do you optimize the performance of a Node.js application?
+Have you used the cluster module?
+Have you used the timers module? What types of timers are available?
+Can we access the DOM in Node.js? Which library?
+What packages do you use for file uploading? (Multer)
+What is garbage collection in Node.js?
+Have you created RESTful APIs? Write a RESTful API using Express with GET and POST methods.
+System architecture & security
+
+Do you have experience in system architecture?
+What's the difference between monolithic and microservices architecture?
+What is scalability?
+What is high availability and load balancing?
+What is an API gateway?
+What is rate limiting?
+Do you have experience with event-driven architecture?
+What is a message broker?
+What is the event loop?
+What are the challenges in event-driven architecture?
+What's the difference between synchronous and asynchronous communication?
+What's the difference between a message queue and an event stream?
+What is a DLQ (dead letter queue)?
+What is pub/sub?
+Do you have experience with AWS, Azure, or cloud platforms / Docker?
+What is OAuth?
+How do you implement authentication and authorization?
+What is a JWT token?
+Process
+
+Are you following Agile methodology? What is Agile?
+How many people are on your current project, and what are your roles and responsibilities?
+-----------------
+react and node
+
+ * How much experience do you have in Node and React?
+ * How much experience do you have in TypeScript?
+ * Are you familiar with microservices?
+ * What is the difference between TypeScript and JavaScript?
+ * What about the arrow function? Is it a feature of TypeScript or do we have it in JavaScript?
+ * Can you tell me what are primitive and non-primitive data types?
+ * What about null and undefined? Are they primitive or non-primitive?
+ * What is the difference between the unknown and any keywords in TypeScript?
+ * What is the never keyword?
+ * Are you familiar with interfaces?
+ * Can you write a user object interface?
+ * Which keyword do we use for the interface—can we implement or can we extend? What about extend?
+ * Are you familiar with type aliases? What is a type alias?
+ * What is a shallow copy and a deep copy?
+ * Can you print the name of the user here using the interface?
+ * Can you tell me what is a microservice?
+ * What is the difference between microservices and monolithic architecture?
+ * How do you choose or decide when to use microservices vs. monolithic architecture?
+ * What is an event-driven architecture?
+ * How do we make our APIs secure (from both the server side and front-end side)?
+ * Can you write a POST API in Express to sign up a user?
+ * Why do you need to manually increment the ID if the ID is typically handled by the database?
+ * What is the difference between res.json() and res.send()?
+
+-----------------------------------
+react node 
+
+-   useCallback vs useMemo
+    
+-   How would you handle a third-party component that crashes the UI?
+    
+-   If a component makes multiple API calls on every render, how would you fix it?
+    
+-   How would you fetch two APIs simultaneously?
+    
+-   How would you refresh API data every 30 seconds?
+    
+-   How would you implement protected routes to prevent unauthenticated access?
+    
+-   How would you handle an API that takes time to respond in the UI?
+    
+-   Do you have experience with NestJS?
+    
+-   What AWS/cloud experience do you have?
+    
+-   Have you created REST APIs with Node.js/Express?
+    
+-   Build a REST API to fetch employee details by employee ID from a database.
+    
+-   Integrate that API endpoint with a React application.
+    
+-   Structure the solution with controller, service, and database layers.
+-----------------------------
+### Coding Challenge
+
+Write a **dynamic JavaScript search method** for mock movie data.
+
+#### Requirements
+
+-   Accept a **string input** such as `"mov"` or `"test"`
+    
+-   Return all **movie names starting with** that string
+    
+-   Remove **duplicate names** from the result
+    
+-   Return **only an array of names**, **not objects**
+    
+-   Logic should **scale as data grows**
+    
+-   Use **modern ES6+ features**
+    
+-   Be prepared to discuss **time complexity** and **space complexity**
+ 
+[
+      { "name":"movie 1",
+      "movies":{
+            "name":"testmovie 2",
+            "movies":{
+               "name":"movie 2",
+               "movies":{
+                     "name":"spamtestmovie 2",
+                     "movies":{
+                        "name":"Appspamtestmovie 2"
+                     }
+               }
+            }
+      }
+      },
+ 
+      { "name":"movie 3",
+      "movies":{
+            "name":"testmovie 2",
+            "movies":{
+               "name":"movie 4",
+               "movies":{
+                     "name":"spamtestmovie 3",
+                     "movies":{
+                        "name":"Appspamtestmovie 3"
+                     }
+               }
+            }
+      }
+      }
+
+
+]
+ 
+
+--------------------------
+global logic
+
+rag 
+mcp severintegration
+genretci ai and agneyic ai
+
+### Coding Exercise
+
+- Problem: find the longest increasing-order substring from a string of integers
+- Manisha solved it correctly (output: 13689)
+- Interviewer suggested optimization: track start index and size instead of storing full substring in array
+- Manisha understood the concept but needed guidance to arrive at the memory-efficient approach
+
+### AI and Agentic AI Discussion
+
+- Prompt engineering approach: role-framing, regression-free constraints, negative scenarios, switching tools (Codex vs. Claude) when one underperforms
+- Token reduction: requests optimal solutions upfront, starts new sessions to avoid long context history
+- RAG: knows the concept (retrieval-augmented generation); understands use case for internal docs
+- MCP: has integrated MCP servers via Codex; understands client-server flow but unfamiliar with prompt/resource lifecycle details
+- Agentic AI vs. AI agents: definitions were unclear; could not clearly differentiate the two
+- Role context: client is in healthcare, seeking fully autonomous AI-first development (no human intervention, end-to-end: requirements to deployment)
+-----------------
+capegimini
+
+- Node.js task:
+  - GET / returns “Hello World”
+  - GET /hello returns “Hi”
+  - Endpoint to read a file asynchronously
+  - Error handler for unhandled endpoints
+- React task:
+  - Search component with an input box
+  - Debounced API call on input (500ms debounce)
+- Both tasks to be written separately, no integration required
+- Tools: Notepad, StackBlitz, or any preferred compiler 
+-----------------------
+HCL
+let state = { value: "Alpha" };
+let snapshot = state;
+
+
+state.next = state = { value: "Beta" };
+
+console.log("1:", state.value);
+console.log("2:", state.next);
+console.log("3:", snapshot.value);
+console.log("4:", snapshot.next);
+
+
+state.next = state = { value: "Beta" };
+
+console.log("1:", state.value);
+console.log("2:", state.next);
+console.log("3:", snapshot.value);
+console.log("4:", snapshot.next);
+
+console.log(typeof a, typeof b); 
+var a = 10; 
+let b = 20; 
+console.log(a, b);
+
+
+function counter() {
+  let count = 0;
+
+  return () => ++count;
+}
+
+
+const c1 = counter();
+const c2 = counter();
+console.log(c1());
+console.log(c1());
+console.log(c2());
+console.log(c2());
+
+function counter() {
+  let count = 0;
+
+  return () => ++count;
+}
+
+const c1 = counter();
+const c2 = counter();
+
+Find the length of the longest substring without repeating characters.
+Example: Given "abcabcbb", the answer is "abc", which has a length of 3.
+
+how to analyz which is taking more memory in node
+query to findout 3 highest salary of employee
+code for rate limiting
+web workers 
+code for web workers in node
+thread pool
+---------------------
+vinyota node and angular
+console.log("1");
+
+setTimeout(() => {
+
+    console.log("2");
+
+}, 0);
+
+Promise.resolve().then(() => {
+
+    console.log("3");
+
+});
+
+process.nextTick(() => {
+
+    console.log("4");
+
+});
+
+console.log("5");
+ 
+1 5 4 3 2
+ 
+for (var i = 0; i < 5; i++) {
+
+  setTimeout(() => {
+
+    console.log(i);
+
+  }, 100);
+
+}
+
+
+for (let i = 0; i < 5; i++) {
+
+  setTimeout(() => {
+
+    console.log(i);
+
+  }, 100);
+
+}
+
+ 
+0 1 2 3 4
+
+
+JavaScript & Node.js
+How would you rate your skills in Node.js versus frontend development?
+What is hoisting in JavaScript?
+What is a constructor in JavaScript?
+What is a recursive function, and how is it different from a constructor?
+What is the difference between setTimeout and setInterval?
+What is the event loop in Node.js?
+In the event loop, what is the role of event emitters, macro-tasks, and micro-tasks?
+How does the callback stack know whether a task has finished or not, and what are its different use cases?
+What are promises in Node.js?
+How do you handle errors and debugging in asynchronous versus synchronous operations?
+What is a worker thread?
+Apart from Express.js, have you used any other REST API frameworks (such as Fastify)?
+What is middleware in Express.js?
+What is the process object in Node.js and how is it used?
+What approaches do you take to improve security and optimize code at both the code level and the server level?
+Can you describe a difficult situation you encountered during development in Node.js?
+Output-based question: What is the output of the provided console log snippet containing nested loops?
+React.js & Frontend Architecture
+Can you explain the lifecycle of React.js components?
+What is the difference between class components and functional components?
+What is the Virtual DOM in React.js?
+What is a React Fragment and what is its use case?
+What are higher-order functions/components in React.js?
+What is the difference between useEffect and useLayoutEffect?
+What state management tools have you used (apart from context management), and what is Redux Thunk?
+What is the difference between useNavigate and the Navigate component?
+How would you design the architecture for role-based access management (RBAC) in React.js?
+Security, Databases, & System Design
+What is the difference between authentication and authorization?
+What is the difference between encryption and hashing?
+Can you explain some common hashing algorithms?
+What is salting and why is it important when storing passwords?
+Which databases are you familiar with (MongoDB, PostgreSQL, MySQL)?
+What is normalization in MySQL?
+What approaches do you take to optimize SQL queries?
+What is transaction management in MySQL?
+What is the difference between a subquery and a JOIN?
+What kind of architecture are you using (microservices vs. monolith)?
+For microservice management, do you use tools like Nx or Turborepo, and how do you manage them?
+-------------------------- 
+
+Manisha Gupta <manishagupta20058@gmail.com>
+5:17 PM (0 minutes ago)
+to manisha
+
+Background & Experience Questions
+
+What is your total years of experience?
+Recently are you working on React or Angular?
+Since when have you been working with React / how many years?
+What is your current tech stack in your recent project?
+What is your current project about?
+What details does it provide? (Follow-up clarification on the project functionality)
+Instead of using React and Node, Next.js also could have been used, right?
+Is this front-end side rendered, or how do you compile it / do you create a static build?
+Hardware-based or not, there must be some container or server where your application is running, right?
+Which version of React are you using?
+Have you also worked on class-based components?
+React Core & Hooks Questions
+
+Suppose there is a situation where you need to compare old and new prop values and decide whether to perform an operation; how would you maintain this previous and new value inside a React hooks component?
+How would you put up a logic if previous prop A > new prop A to trigger an if/else condition?
+Can you write and show this code in Notepad?
+Why did you use useRef?
+Can I use useState instead of useRef?
+Is there any reason you picked up useRef?
+Can we do it using useState?
+If we use useState, how will we get the previous value?
+Can you explain this code and how it works step-by-step?
+In what sense is useRef better than useState here?
+Why do you think useState will cause unnecessary re-renders if we can control it via useEffect?
+DOM & UI Interaction (Modal Scenario)
+
+Assume a scenario where we have a modal window component: how do you add functionality so that clicking outside the modal closes it, but clicking inside keeps it open?
+How will you implement this logic?
+Where will you register the click event first of all?
+How will you get to know whether the click is inside or outside the modal element?
+Length/dimensions can change across responsive devices, so how can you check based on length?
+Are you referring to any other source for the answer?
+Redux & State Management Questions
+
+Have you used Redux?
+Can you explain on a high level how the Redux architecture works?
+What is the benefit of Redux if a project doesn't have it, or what is the limitation of not using it?
+How are you doing state management in your current project?
+What is the difference between Context API and Redux?
+In large projects, what is the issue with React Context / why is it not suitable?
+Why does re-rendering happen in Context API? Is there a criterion, or does it keep re-rendering?
+Why not just create multiple different contexts to solve the re-rendering problem?
+How does Redux solve this re-rendering problem compared to Context API?
+Why does Redux not re-render unnecessary components when state changes?
+API Architecture & Production Debugging Questions
+
+Can you explain the API architecture when creating REST APIs (what is the initial thing you do)?
+What are the types of errors we get / HTTP status codes?
+Scenario: You created an API, no data is available, and you're the full-stack developer. What do you need to do on the front-end side so the user gets informed?
+Scenario: Code is deployed to production/E3, but runtime errors occur that cannot be seen via the browser console. How do you handle and identify this type of scenario?
+Node.js / Express Middleware Questions
+
+What is middleware and why do we use it?
+Does middleware work as a synchronous operation or asynchronous?
+If you have middleware and want to perform asynchronous API calls inside it, what will you do?
+If your project currently has a synchronous API call and you need to change it to an asynchronous call from the front-end/Node side, what will you do?
+Closing Question
+
+Do you have any questions for us?
+
+---------------------------
+Candidate Background & Experience
+
+Tell me about yourself, Manisha.
+You have worked on AI and LLM models also, no?
+Any example can you share in detail?
+You have worked with CitiBank, no? What type of work was that?
+You have worked with Netgear also, no? How is the hardware communicating with the application? Internally, how is it working?
+In your career, which project do you like the most and feel satisfied with?
+In Samsung, were you an employee of Samsung or a vendor?
+Right now, which company are you with?
+What is the work location?
+What is your job profile there?
+Which technology stack are you using (React and Node)?
+Node.js & Backend Architecture
+
+In Node.js, how will you prevent SQL injection?
+Do you know what a rate limiter is?
+How will you implement a rate limiter in a Node.js application?
+Suppose you have to create an API that receives up to 1 million hits per day. How will you optimize it so response times stay low?
+If you are using Redis for caching and the data is dynamic, how will you implement that?
+What is a counter in Redis and how does it work for rate limiting?
+If you have certain events in Node.js that must execute sequentially, how do you implement that?
+What is the current version of Node.js?
+What is the current NPM version?
+Have you used any ORM in Node.js (and which one)?
+Databases & SQL
+
+Given a table with columns ID, category_id, content, and created_date, write an SQL query to fetch the top 5 records for each category ordered by created_date descending.
+Design Patterns
+
+Which design patterns are you following?
+Have you used any other design patterns besides MVC?
+What is the difference between MVC and the Singleton pattern?
+--------------------
+ackground / experience
+
+"Can you let me know your [skills]?" — asking about the tech stack she works with.
+"Python — how much duration you're exploring it?" (how long she's worked with it).
+"Can you briefly explain to me what are the roles and responsibilities that you have taken up in the last 6 months?"
+Gen AI screening
+4. "I see you have mentioned some [things] related to Gen AI, like LangChain. What is your exposure to LangChain?"
+5. "And RAG pipelines?"
+
+Confidence check
+6. "How confident are you if I ask you to solve a problem in Python — would you be able to solve it?"
+
+Live coding problem (main task)
+7. Max profit stock problem: given an array of stock prices (prices of a single stock across days of a week, e.g. 101 on Monday, 110 on Friday), buy at one point and sell at another to find the maximum profit possible, with the constraint that you can only sell after you've bought.
+
+Wrap-up
+8. "Do you need more time?" (she asked for 5–10 extra minutes)
+9. "Do you have anything else / any questions?"
+
+She wasn't able to deliver an error-free solution in the time given.
+-----------------------
+## Detailed interview questions
+
+### Background and projects
+
+1.  Tell me about yourself.
+2.  What is your total experience?
+3.  How many years have you worked with React, Angular, and Node.js?
+4.  What roles have you performed—tech lead, senior developer, or individual contributor?
+5.  Explain your current project.
+8.  Explain the microfrontend architecture used in your project.
+9.  What are shell and remote modules in microfrontends?
+10.  Explain your Citibank project and the modules you worked on.
+11.  Explain the Fujitsu migration project.
+12.  What was challenging about inheriting a partially completed project without documentation or KT?
+13.  Which vendors had previously worked on the Fujitsu codebase?
+14.  What was the Fujitsu project timeline?
+15.  Which version-control system have you used?
+
+### Angular and React
+
+16.  Which state-management libraries have you used?
+17.  Explain NgRx: store, actions, reducers, and state updates.
+18.  Have you used Redux with Angular? If not, what did you use instead?
+19.  What are RxJS observables and subscriptions?
+20.  What is `angular.json` used for?
+21.  How do you pass data from parent to child in Angular?
+22.  How do you pass data from child to parent in Angular?
+23.  What is wildcard routing in Angular?
+24.  How does Angular differ from React in your projects?
+
+### Node.js
+
+25.  What are Node.js core modules? Give examples.
+26.  What is EventEmitter and how is it used?
+27.  Explain `async` and `await`.
+28.  How would you handle an asynchronous database/API operation?
+
+### JavaScript
+
+29.  How do you merge two JavaScript objects?
+30.  What is the difference between shallow copy and deep copy?
+31.  Which copy type shares nested-object references?
+32.  How can you create a deep copy?
+33.  Differentiate `var`, `let`, and `const`.
+34.  What is function scope versus block scope?
+35.  What is hoisting?
+36.  What is the temporal dead zone?
+
+### Design patterns
+
+37.  Which design patterns have you used?
+38.  Explain MVC.
+39.  Explain the Singleton pattern.
+40.  Explain the Observer pattern and its relationship to RxJS.
+41.  Explain the Facade pattern in Angular/NgRx.
+
+### CSS
+
+42.  What CSS `position` values do you know?
+43.  Explain `relative`, `absolute`, `fixed`, and `sticky`.
+44.  How do you hide an HTML element using CSS?
+45.  What is the difference between `display: inline` and `display: inline-block`?
+
+### Agile and leadership
+
+46.  Which delivery methodology did your project use: Agile or Waterfall?
+47.  What Agile ceremonies/events do you know?
+48.  What is the technical name for the customer demo at the end of a sprint?
+
+-   Expected answer: **Sprint Review**.
+
+49.  What happens during backlog refinement?
+50.  How do you estimate a user story or ticket?
+51.  How do you resolve different estimates from developers?
+52.  What do you do when the customer expects a shorter timeline than the team estimates?
+53.  How would you handle a strict customer deadline with no timeline extension?
+54.  How do you track delivery without micromanaging?
+55.  What are the drawbacks of micromanagement?
+56.  How often should a tech lead check progress with developers?
+--------------------
+## Detailed interview question list
+bechtel
+
+### Background and project
+
+1.  Introduce yourself, including your experience, domains, and technologies.
+2.  Describe your current/last project at Cisco.
+3.  What modules did you build for the switches and routers UI?
+4.  Where does the application get its data from if it does not access the database directly?
+5.  What kind of authentication does the project use?
+6.  Is authorization role-based or user-based?
+7.  How are admin users managed?
+8.  Is access tied to device credentials and IP addresses?
+
+### Login security and authentication
+
+9.  When a user submits a login form, can the password be viewed in the browser’s Network tab?
+10.  Is a JWT available before or after login credentials are submitted?
+11.  Where should JWTs be stored: local storage, cookies, or HTTP-only cookies?
+12.  How can the username and password be protected while being sent to the API?
+13.  What does password encryption in a login request mean in practice?
+14.  Why is storing credentials in the browser unsafe?
+15.  What is the difference between password security in transit and token storage after login?
+
+### Large-data rendering and performance
+
+16.  How would you display **3.5 lakh records** in one page?
+17.  How would you support bulk editing across all records without conventional pagination?
+18.  How would you preserve sorted data while loading such a large dataset?
+19.  What is virtualization?
+20.  How does virtualization improve DOM rendering performance?
+21.  Is virtualization sufficient to make 3.5 lakh records load quickly?
+22.  What backend optimizations would also be required?
+23.  How can caching help when the data has not changed?
+24.  What factors determine whether the page loads in 5, 7, or 10 minutes?
+
+### API abuse, repeated requests, and rate limiting
+
+25.  How can repeated API calls overload an application?
+26.  How can you protect APIs from malicious or excessive traffic?
+27.  What is rate limiting?
+28.  How does rate limiting work internally?
+29.  Which identifiers can be used for rate limiting: IP address, user ID, API key, or token?
+30.  How do you define a rate-limit window and maximum request count?
+31.  What happens when a user exceeds the request limit?
+32.  If a user clicks a button 100 times, how do you prevent duplicate requests?
+33.  What is the difference between debouncing and throttling?
+34.  When should debouncing or throttling be used on the frontend?
+35.  What additional controls can be used besides rate limiting?
+36.  How do token validation, input validation, and parameterized queries help secure APIs?
+
+### Server capacity, scaling, and load balancing
+
+37.  What happens when a server receives more requests than it can handle?
+38.  How would you optimize an overloaded server?
+39.  What is horizontal scaling?
+40.  Why would you add more application instances?
+41.  What is a load balancer?
+42.  How does a load balancer distribute requests among application servers?
+43.  What algorithms can a load balancer use—for example, round robin, least connections, or weighted routing?
+44.  Does each server handle the same functionality, or can services be split by function?
+45.  How could premium and standard users be prioritized without incorrectly routing them to separate servers?
+46.  How would API limits differ for premium versus standard users?
+47.  If traffic is distributed across multiple servers, how can authentication tokens remain valid?
+48.  What is stateless authentication, and why is it useful in distributed systems?
+
+### React, Redux, state, props, and Context API
+
+49.  When should Redux be used?
+50.  When should local component state be used?
+51.  What does “global state” mean?
+52.  What is the difference between local state and global state?
+53.  What is the difference between Redux and props?
+54.  What are props used for?
+55.  How does data flow from a parent component to a child component through props?
+56.  What is state in React?
+57.  In a shopping cart, which data should be global?
+58.  Why might cart, checkout, shipping, inventory, and pricing affect each other?
+59.  If a user deletes an item from the cart, should the change be local state or Redux state?
+60.  In an e-commerce flow, how would you manage add-to-cart, card offers, deletion, inventory, and checkout?
+61.  Does a card offer need to be stored globally? Why or why not?
+62.  Can props replace Redux? What are the drawbacks of prop drilling?
+63.  What is Context API?
+64.  How does Context API avoid prop drilling?
+65.  When is Context API sufficient?
+66.  When is Redux preferable to Context API?
+67.  Why can frequent Context updates cause unnecessary re-renders?
+68.  Is Context API “two-way communication,” or is it a state-sharing mechanism?
+
+### Node.js concurrency
+
+69.  Node.js is single-threaded—how can it handle many tasks concurrently?
+70.  What is the event loop?
+71.  What is the call stack?
+72.  What are asynchronous tasks?
+73.  What is the callback/task queue?
+74.  How are asynchronous operations processed before their callbacks return to JavaScript execution?
+75.  What is the difference between browser Web APIs and Node.js runtime APIs?
+76.  When does the event loop move queued work onto the call stack?
+77.  What are worker threads?
+78.  Why are worker threads useful for CPU-intensive work?
+79.  If Node.js is single-threaded, how can it execute code on more than one thread?
+80.  What kinds of tasks should use worker threads instead of the event loop?
+--------------
+premerica
+
+Refined Interview Questions
+A. Background, Project & Team Leadership
+Can you briefly explain your career journey, current project, roles and responsibilities, technology stack, and team size?
+What are your key roles and responsibilities in your current project?
+When your team gets stuck on a technical problem, how are you involved in solutioning? Do you participate in architectural or module-level design, or is that handled by an enterprise architect?
+Can you explain your current project's architecture at a high level?
+What are the major modules?
+How do they interact with each other?
+How does traffic flow through the system?
+What design patterns have you used?
+What security mechanisms/protocols have you implemented?
+How have you handled scalability?
+How have you handled concurrency?
+B. Database & System Design
+Which database are you using in your current project?
+If you were designing a new system, how would you decide between an SQL and NoSQL database? What factors would you consider?
+Are you familiar with the CAP theorem? Explain it.
+C. Code Review & Design Principles
+As a tech lead, when you review code written by your teammates or junior developers, what are the top three or four things you look for apart from standard coding practices?
+Do you consider SOLID principles and design patterns during code reviews? Which ones do you commonly look for?
+Can you explain the Single Responsibility Principle and other SOLID principles that should be considered while designing or writing code?
+D. JavaScript Coding – String Manipulation
+Write a JavaScript/Node.js program to sort a string alphabetically.
+Write a program to find duplicate characters in a string.
+Modify the program to count the number of occurrences of each duplicate character.
+How would you identify which character is duplicated?
+How would you sort the string?
+Is there any built-in JavaScript method/library function that you can use for sorting?
+E. Production Performance & Optimization
+Suppose your application is running in production and users are reporting latency and performance issues. How would you investigate and optimize the application's performance?
+What application-level and database-level techniques can you use to improve performance?
+How can caching help improve application performance?
+How can asynchronous processing/API calls help improve performance?
+How can database indexing improve application performance?
+
+till printout of node 
+---------------------
+hexware angular/python/react (new prinout)
+
+Round 1: Full-Stack Architecture & Backend (Interviewer 1)
+
+Can you please go ahead with your introduction? How many years of experience do you have overall, what technologies and tools have you worked with, and what kind of projects have you done so far?
+What is the percentage you are playing as an individual contributor, and what is the percentage you are playing as a team lead?
+System design / Delivery lifecycle scenario: Suppose I am a CitiBank customer and I come to you with a project requirement. For example, you need to extract some information from an SQL server and show it on the UI, or from the UI the customer updates profile info (like name or personal account) and clicks submit, which updates the MySQL server. How will you plan and move forward from the POC, to MVP, to the final productionized version, and what things will you take care of from the beginning until deployment?
+If you want to play an Individual Contributor role, how about the technical things? What is the technical skill set, architecture, tools, libraries, and Python backend implementation needed to move forward with this logic?
+How many functions do we need? How will this request reach the SQL server, how do you initiate the server connection, extract information, return a JSON string response to the UI, and what microservices/functions are involved?
+When a user enters their username and password on the UI for authentication, where is it going, how is it checking, and how is it allowing the user into the main page?
+How is that request physically reaching from the frontend to the backend?
+Once the credentials reach the Python backend, what is happening exactly? How is it checking and validating whether the username and password are correct?
+In the Python backend, what functions or microservices handle this, and where is the verification against the username and password happening?
+What API frameworks do you know?
+Have you done any deployment in your previous projects?
+Round 2: Frontend (Angular, React, JavaScript) (Interviewer 2)
+
+What is your experience with Angular—which versions have you worked on previously, and which version are you currently working on?
+Do you have experience with Angular migration? Which versions have you migrated from and to?
+What challenges did you face during Angular migration?
+If there is an Angular project developed in Angular 9 and you need to migrate it to version 19 or 20, what is the best approach to proceed? Do you migrate version-by-version or directly from 9 to 19/20?
+What are the new features introduced in recent Angular versions (Angular 16 to 19/20)?
+Have you used Angular Signals in your project? Can you explain a specific use case where you used them?
+Why do you think Signals were introduced in Angular? What is the reason behind it compared to change detection?
+What is change detection in Angular?
+Do you have experience with NgRx for state management? Can you give a small introduction to what NgRx is and why we use it?
+Can you walk through the simple workflow / life cycle of how NgRx works?
+Where do we place API calls in NgRx—in the reducer or in effects?
+Why can't we call the API inside the reducer? What is the reason behind that?
+Have you heard about pure functions? What is a pure function?
+Can we call a reducer a pure function?
+If you have to choose between NgRx and Angular Signals, which one would you choose, and in what situations would you choose one over the other?
+Coding / Event loop snippet in chat: What will be the output of this JavaScript snippet containing console.log, setTimeout, and Promise.resolve()?
+Why is that the output order? (Explanation of Call Stack, Web APIs, Microtask Queue, and Macrotask Queue).
+How much experience do you have in React, and how many projects have you completed in it?
+How can you prevent unnecessary re-rendering of data in React?
+What is useMemo in React?
+If one of your React pages needs to showcase 20,000 or 50,000 rows of data, how are you going to manage that performance?
+What is virtualization, and how does it work?
+Can you name some of the functions/operators used in RxJS?
+What is the difference between mergeMap and forkJoin?
+What is the difference between mergeMap and switchMap?
+Do you have any questions for us?
+---------------------------------------
+cognizant
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+console.log([] + []);
+
+ 
+console.log({} === {});
+
+ 
+console.log(10 + 2 + "9");
+
+ 
+129
+ 
+const user = {
+
+  name: "Alice",
+
+  greet() {
+
+    console.log(this.name);
+
+  }
+
+};
+ 
+const sayHello = user. Greet;
+
+sayHello();
+alice
+ 
+detach this
+
+Problem statement
+Design a simple, interactive system that displays a list of doctors with their current availability status (Available, Not Available, On Leave) and allows users to update this status dynamically through a single click.
+ 
+
+---------------------
+# Coforge Interview Confirmation
+
+Fri, 11 Sept 26 · Sindhoora Sadananda
+
+## Background and Introduction
+
+- Manisha introduced herself to Vishal (Coforge interviewer)
+- MCA graduate, started as PHP/AngularJS/JavaScript developer, shifted to pure frontend
+- Current skills: AngularJS, Angular 2, Vue.js, React, Node.js, Python
+- Past clients: Citibank, Cisco, Fujitsu (via Wipro); hardware projects at Vividant Technology (Netgear, Veeam)
+- Roles: individual developer and prior tech lead (requirements, HLD, agile/sprint delivery)
+
+## Experience Check
+
+- React: 6 years
+- Node.js: 5 years
+- Cloud (AWS/Azure): none
+- Databases: MySQL, PostgreSQL
+
+## JavaScript and ES6 Questions
+
+- ES6 features listed: arrow functions, classes, spread/rest operators, promises, Map
+- Arrow function vs. normal function
+  - Arrow functions inherit this from lexical scope; no own this binding
+  - Normal functions use the this of the calling context
+- Event delegation: delegating event handling to a parent element
+- Throttling: limiting API call frequency by setting a time delay between calls
+  - Example: search input box calling API on every keystroke vs. throttled interval
+
+## React and Component Questions
+
+- Components: reusable UI templates; examples given: header, footer components
+- Hooks in loops/conditions: Manisha acknowledged unfamiliarity with the exact reason
+- Component re-rendering
+  - Triggered by prop changes from parent to child
+  - Virtual DOM compared with previous DOM; reconciliation and re-linking occur
+- count && batch rendering literal 0
+  - Interviewer explained: && evaluates left to right and returns actual expression value
+  - Falsy value (0) renders directly in the UI instead of nothing
+- Performance/lagging list components
+  - Identify async opportunities, check for initialization loops
+  - Tools: React Developer Tools and Profiler
+
+## Coding Task
+
+- Problem statement sent via Teams chat
+- Task: build a React component displaying doctor availability in tabular form
+  - Data: doctor name + availability status (Available / Not Available / Only)
+  - Dropdown filter to select availability status
+  - No real API available; use a mock array of objects with name and status fields
+  - Display filtered results on the frontend
+
+---
+
+message queue
+performace optimization
+find second highest salary
+---------------
+19-8-2026
+impressico
+
+Exact Questions Asked
+
+A. Development Process / Jira
+
+1. “Here all the requirements have been already mentioned in the Jira ticket. So what's your first step or what's your process to implement the ticket into the development?”
+
+
+
+B. AI / Codex / PR
+
+2. “You use Codex, right?”
+
+
+3. “Did you also use Codex to review the PR of any other team member?”
+
+
+4. “How do you use Codex/your PR review skill to identify issues and provide feedback to developers?”
+
+
+
+C. Specification / Documentation
+
+5. “Do you create a specification document once you start any development/task/story?”
+
+
+6. “Do you create a specification document covering everything that you're going to develop?”
+
+
+
+D. React — Exact Questions
+
+7. “How would you rate yourself in React out of five?”
+
+
+8. “Every component has mounting, updating and unmounting. I want three console logs.”
+
+
+9. “What is current?” — referring to isFirstRender.current.
+
+
+10. “Write a custom hook which fetches the data from this server. That should return loading, data and error.”
+
+
+11. “Difference between useEffect and useLayoutEffect?”
+
+
+12. “If we put console in both useLayoutEffect and useEffect, which will print first?”
+
+
+13. “Difference between useMemo and useCallback?”
+
+
+14. “What is reconciliation?”
+
+
+15. “How do you handle components repeating unnecessarily?” — referring to unnecessary re-renders.
+
+
+16. “What is concurrent rendering?”
+
+
+17. “SSR.” — asking about SSR.
+
+
+18. “Can we use SSR in ReactJS or Next.js both, or only Next.js?”
+
+
+19. “Difference between localStorage and sessionStorage?”
+
+
+20. “What is Redux and how it works?”
+
+
+21. “What is a Pure Component?”
+
+
+
+E. Node.js — Exact Questions
+
+22. “What is event loop? What does event loop actually do?”
+
+
+23. “What is Redis server and why do we use it?”
+
+
+24. “What do you notice with memory-related issues?” — referring to Node.js memory issues.
+
+
+25. “What is Cluster?”
+
+
+26. “According to the worker thread, that process will be same and different tasks can be executed. Means the different memory will not...?” — discussion around Cluster/Worker Threads and memory.
+
+
+
+F. Database Migration / Production Scenario
+
+27. “How would you migrate lakhs/millions of active user data from the legacy DB to the new DB without downtime?”
+
+
+28. “If any kind of issue comes after migration, and for that also we need to go chunk-wise only?”
+
+
+29. “You are migrating in a chunk, and in your first chunk there is a production issue, means the user which you have migrated is facing some issue, then what you would do first?”
+
+
+30. “What could happen in the files/data which are already migrated?”
+
+
+31. “It can happen after one day, not immediately. Suppose you are migrating in off time, and next day when user comes and feels like there is an issue in his profile or something like that…” — follow-up scenario.
+
+
+
+G. Your Questions to Interviewer
+
+32. “What will be the roles and responsibilities?”
+
+
+33. “Which kind of project is it for which you are hiring?”
+
+
+34. “Is this a maintenance project or new feature/new kind of requirement?”
+
+
+
+H. Closing
+
+35. “Did it answer your question?”
+
+
+36. “Anything else?”
+
+
+
+Important: I have deliberately not added questions like React.memo, virtualization, Context, rate limiting, etc. because you asked for the exact questions asked, not questions that could have been asked.
+
+----------------
+
+ 
+
+
