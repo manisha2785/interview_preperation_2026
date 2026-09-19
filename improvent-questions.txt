@@ -1,0 +1,118 @@
+Based only on this interview, your weak areas are:
+
+🔴 High Priority
+
+1. Node.js Event Loop — deep understanding
+
+
+2. Cluster vs Worker Threads
+
+
+3. Node.js memory leaks & production debugging
+
+
+4. Database migration/system design
+
+Chunk migration
+
+Zero downtime
+
+Rollback
+
+Reconciliation
+
+Delayed issues after migration
+
+
+
+5. React Concurrent Rendering
+
+
+6. React lifecycle with hooks
+
+Mount
+
+Update
+
+Cleanup/unmount
+
+useEffect behavior
+
+
+
+
+🟠 Medium Priority
+
+7. useRef / ref.current
+
+
+8. React performance optimization
+
+React.memo
+
+useMemo
+
+useCallback
+
+Unnecessary renders
+
+Profiler
+
+
+
+9. AI/Codex in real development
+
+PR review
+
+Validating AI-generated code
+
+Giving feedback based on AI findings
+
+
+
+10. Senior Jira → development process
+
+
+11. Specification/documentation before development
+
+
+
+🟢 Relatively Comfortable
+
+12. useEffect vs useLayoutEffect
+
+
+13. useMemo vs useCallback basics
+
+
+14. Reconciliation basics
+
+
+15. Redux basics
+
+
+16. SSR basics
+
+
+17. localStorage vs sessionStorage
+
+
+18. Pure Components
+
+
+19. Redis basic use cases
+
+
+20. Custom React hook structure
+
+
+
+🎯 Your main gap
+
+It's not lack of basic knowledge.
+
+Your biggest gap is:
+
+Concept → deeper “why” → production scenario → interviewer follow-up.
+
+So your preparation should focus first on Node internals + migration/system design + React internals, rather than learning more basic React topics.
