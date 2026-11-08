@@ -1,0 +1,71 @@
+hashmap and collision
+https://www.youtube.com/watch?v=1CJbB6SzjVw 
+
+race condirion
+https://www.youtube.com/watch?v=pFxd6N2VCm0
+
+
+ey 9-10
+
+Could you please introduce yourself, and what is your role and responsibilities in your current project?
+Could you please explain method overloading and method overriding?
+In method overriding, is it possible to change the return type?
+If a method in the parent class returns a character and the child class overrides it returning a number, is that possible? If yes, how can we achieve that?
+What is the String Pool?
+For the statement String s = new String("hello"), where and how will the object be created from a memory perspective?
+
+----------------------
+persistence ai interview
+
+Here are the interview questions and prompts, in order. I’ve lightly cleaned up the wording:
+
+1. **Introduction:** Tell me about yourself.
+2. **Full stack:** How do you integrate Angular/React with Node.js/Java to build a scalable application?
+3. Describe a specific integration challenge and how you resolved it.
+4. How did you maintain data consistency and performance during real-time WebSocket interactions?
+5. How would you structure backend APIs and the database schema for efficiency and maintainability?
+6. **Microservices:** How have you designed microservices for scalability and fault tolerance?
+7. How did you implement timeouts, retries, and circuit breakers? Which tools or frameworks did you use?
+8. How did you handle service communication, discovery, and load balancing?
+9. Give a specific work example of implementing those components, including the tools or platforms used.
+10. **Distributed teams:** How do you coordinate with teammates in different locations?
+11. How do you handle time zones and cultural diversity?
+12. **Production support:** How have you ensured high availability and quick issue resolution?
+13. Which monitoring tools or dashboards have you used, and how do you prioritize critical incidents?
+14. Describe a specific incident, your troubleshooting steps, and how you minimized downtime.
+15. **Angular:** How have you used Angular and SPA architecture to build responsive applications?
+16. Give an example of optimizing an Angular SPA and explain how you measured the improvement.
+17. How did you measure the user-experience or application-metric impact of lazy loading?
+18. **Coding round:** Design a thread-safe LRU cache in Java with fixed capacity and **O(1) `get` and `put`**, without concurrent collections or a prebuilt LRU cache.
+19. How would your locking approach change if you used `ReadWriteLock` instead of `ReentrantLock`?
+20. How would you implement `get` and `put` differently with `ReadWriteLock`?
+21. How could you allow concurrent reads in `get` without compromising LRU ordering?
+------------------------------------
+
+Key Responsibilities:
+Design and implement end-to-end features across frontend (React/TypeScript) and backend (Python, Java) services [cite: pure-search-1].
+Build and integrate GenAI-powered capabilities, including AI agents, retrieval-augmented generation (RAG), and LLM orchestration pipelines [cite: pure-search-1].
+Architect and maintain distributed systems handling high-throughput data processing and real-time event streaming [cite: pure-search-1].
+Develop RESTful APIs and microservices with proper authentication, authorization, and observability [cite: pure-search-1].
+Implement CI/CD pipelines and infrastructure-as-code [cite: pure-search-1].Here is the job description for the Senior Full Stack Developer position at Amazon (via ADQ Services) sent by Peggy Pravallika:1
+Position: Senior Full Stack Developer1
+Client: Amazon1
+Payroll Company: ADQ Services1
+Location: Bangalore, India1
+Experience: 10+ Years1
+Employment Type: Full-Time1
+Key Responsibilities:
+Full-Stack Development: Design and implement end-to-end features across frontend (React/TypeScript) and backend (Python, Java) services.1
+GenAI Integration: Build and integrate GenAI-powered capabilities including AI agents, retrieval-augmented generation (RAG), and LLM orchestration pipelines.1
+Distributed Systems: Architect and maintain distributed systems handling high-throughput data processing and real-time event streaming.1
+APIs & Microservices: Develop RESTful APIs and microservices with proper authentication, authorization, and observability.1
+DevOps: Implement CI/CD pipelines and infrastructure-as-code for automated testing, deployment, and monitoring.1
+Required Qualifications:
+Experience: 10–12 years of professional software development experience in full-stack roles.1
+Python: Expert-level proficiency with frameworks such as FastAPI, Flask, or Django; experience with async programming.1
+Java: Strong command of Java 11+ with Spring Boot, microservices patterns, and enterprise-grade application development.1
+React & TypeScript: Proficiency in building modern SPAs with React, state management (Redux/Context), and component-driven architecture.1
+Generative AI: Hands-on experience with LLM APIs, prompt engineering, embedding models, vector databases, and AI agent frameworks.1
+Cloud: Proficiency with AWS services (EC2, ECS/Fargate, Lambda, S3, DynamoDB, SQS, Step Functions, Bedrock).1
+--------------------------
+

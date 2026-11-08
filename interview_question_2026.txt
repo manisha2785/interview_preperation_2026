@@ -2,6 +2,97 @@ study material
 https://www.youtube.com/watch?v=sXohJ3pYAfI&t=22s
 
 
+1 → useFetch
+2 → Debounced search
+3 → Promise.all()
+4 → Dependent APIs
+5 → Pagination
+10 → Autocomplete
+11 → Race condition
+19 → Debounce from scratch
+
+
+React.memo re-render — no props / primitive prop / inline object prop ✅
+Doctor availability component — status update on click + dropdown filter (mock data) ✅
+Debounced search input (500ms delay) ✅
+Custom hook useFetch → returns {loading, data, error} ✅
+useRef vs useState — track previous prop value, compare old vs new ✅
+Modal — click outside closes, click inside stays open ✅
+Immutable state update bug — c = a; c.user = "x" → what's a.user, and OnPush/re-render trigger line ✅
+Fetch two APIs simultaneously (Promise.all) ✅
+Multiple API calls on every render — bug + fix (dependency array) ✅
+Mount/update/unmount — three console.logs with useEffect ✅
+Refresh API data every 30 seconds (setInterval + cleanup) ✅
+Protected routes — block unauthenticated access ✅
+Third-party component crashes UI — Error Boundary ✅
+myForEach polyfill on Array ✅
+Dynamic movie search — nested data, prefix match, dedupe names, ES6+ ✅
+REST API: fetch employee by ID + integrate with React (controller/service/DB layers) — ⏳ pending
+API slow to respond — how do you handle it in UI? (loading/skeleton state) — ⏳ pending
+Lifecycle hooks — write syntax + example (class-based components) — ⏳ pending
+Closure/counter output puzzle — outer()/inner(), called 3x ✅
+count && <Component/> — literal 0 renders bug (Coforge) — ⏳ pending
+localStorage vs sessionStorage — difference (Impressico, more conceptual than coding but often asked with code) — ⏳ pending
+
+
+
+
+import { useState, useEffect } from "react";
+
+const STATUS_OPTIONS = ["Available", "Not Available", "On Leave"];
+
+function DoctorAvailability() {
+  const [doctors, setDoctors] = useState([]);
+  const [filter, setFilter] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/doctors")
+      .then((res) => res.json())
+      .then((data) => {
+        setDoctors(data);
+        setLoading(false);
+      });
+  }, []);
+
+  const handleStatusChange = (id, newStatus) => {
+    setDoctors((prev) =>
+      prev.map((d) => (d.id === id ? { ...d, status: newStatus } : d))
+    );
+
+    fetch(`/api/doctors/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ status: newStatus }),
+    });
+  };
+
+  const visibleDoctors =
+    filter === "All" ? doctors : doctors.filter((d) => d.status === filter);
+
+  if (loading) return <p>Loading...</p>;
+
+  return (
+    <div>
+      <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+        <option value="All">All</option>
+        {STATUS_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
+      </select>
+
+      {visibleDoctors.map((doc) => (
+        <div key={doc.id}>
+          {doc.name} —
+          <select
+            value={doc.status}
+            onChange={(e) => handleStatusChange(doc.id, e.target.value)}
+          >
+            {STATUS_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
+          </select>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 
 
 prompt 
@@ -1626,10 +1717,366 @@ H. Closing
 
 
 
-Important: I have deliberately not added questions like React.memo, virtualization, Context, rate limiting, etc. because you asked for the exact questions asked, not questions that could have been asked.
 
 ----------------
+impresio second round(23-9)
 
+React / Security
+Rate yourself in React out of 10.
+How do you handle a Cross-Site Scripting (XSS) attack in React?
+How do you protect sensitive tokens in React?
+Where would you store access/refresh tokens securely?
+What happens if a refresh token is stolen?
+How would you prevent an attacker from generating new access tokens with a stolen refresh token?
+Is encryption enough for protecting tokens?
+Node.js / Production
+If Node.js application memory grows from 500 MB to 1.5 GB, what happens?
+How would you handle a container exceeding its memory limit?
+How would you identify whether the memory growth is a memory leak?
+How would you troubleshoot a CPU spike to 100%?
+What would you do when response latency is high but CPU usage is low?
+How would you handle a large 10,000-line codebase?
+How would you restart/restore a server safely?
+What would you do if APIs start returning HTTP 500 after deployment?
+Redis
+Why do we use Redis?
+Why use Redis instead of the database?
+How would you implement API rate limiting?
+Why do we need Redis for rate limiting in a distributed Node.js application?
+Where does Redis run—is it inside the Node instance or separately?
+How would Redis be configured in production?
+AWS / Deployment / Containers
+What AWS configuration/machine would you ask for a React + Node.js + Redis application?
+How would you handle an e-commerce sale with 10× traffic?
+How would you scale the application?
+What is vertical scaling vs horizontal scaling?
+Why would you use multiple Node.js instances?
+How does a load balancer help?
+What happens when one application instance goes down?
+What is your experience with containers/patch deployment?
+Database / SQL
+What is normalization?
+What is 1NF?
+What does atomic value mean?
+What is 2NF?
+What is 3NF?
+How would you design the database for Event → Topic → Video Group → Video?
+What relationships would you create between those tables?
+How would you store videos—database or object storage?
+Write a SQL query joining Event, Topic and Video Group.
+Difference between INNER JOIN and LEFT JOIN.
+Frontend / API
+How would you implement search debouncing in React?
+If the user types M → Ma → Man → Mani..., how do you ensure only the final search triggers the API?
+What happens if the previous API request is still running?
+How would you cancel the previous request?
+How would you implement file upload in React + Node?
+Where would you store uploaded files?
+Would you store the actual file/video binary in the database?
+Architecture
+What is monolithic architecture?
+What are microservices?
+What are the advantages/trade-offs of microservices?
+When would you choose monolith vs microservices?
+One important thing from this interview
+This was not just a React coding interview. They tested you heavily on:
+
+React → Node → Redis → AWS → Docker/container → scaling → security → database → production troubleshooting.
+
+For your next interview, I would revise these 50 questions first, especially the ⭐ production scenarios, because they are much closer to what a 10+ year senior React/Node candidate is expected to discuss.
+
+---------------------
+incedo
+
+
+Manisha Gupta <manishagupta20058@gmail.com>
+5:37 PM (1 hour ago)
+to manisha
+
+### Today's interview questions only — 21 October 2026
+
+### JavaScript
+
+* What is event bubbling and event capturing?
+
+* What is `Object.entries()`?
+
+* What is `Object.fromEntries()`?
+
+* Why do we use strict mode in JavaScript?
+
+* Can we use strict mode in production?
+
+* What is `React.StrictMode`?
+
+* What are PropTypes in React?
+
+* What is the difference between arrow functions and normal functions?
+
+* What is lexical scope in JavaScript?
+
+* How do you sort an array of objects by `fatherName`?
+
+* What is an accumulator in `reduce()`?
+
+* What is `Promise.allSettled()`?
+
+* If five promises are passed to `Promise.allSettled()`, three fail and two succeed, what will it return?
+
+* Is a Promise synchronous or asynchronous?
+
+* What is the difference between `Promise.all()`, `Promise.allSettled()`, `Promise.race()`, and `Promise.any()`?
+
+### React
+
+* How does React work?
+
+* What is the Virtual DOM?
+
+* What is reconciliation in React?
+
+* Does React update the previous Virtual DOM node when a value changes?
+
+* How does React compare the previous Virtual DOM with the new Virtual DOM?
+
+* What is virtualization in React?
+
+* What does the `useState` hook return?
+
+* When we call the state setter function, is the state updated synchronously?
+
+* What value will `console.log()` print immediately after calling the state setter: the previous value or the updated value?
+
+* What is the use of the `useEffect` hook?
+
+* What happens if we don't pass a dependency array to `useEffect`?
+
+* What happens if we pass an empty dependency array to `useEffect`?
+
+* How can `useEffect` cause an infinite loop?
+
+* How do we use `useEffect` when a component unmounts?
+
+* What is the difference between `useEffect` and `useLayoutEffect`?
+
+* Does `useLayoutEffect` run before or after the browser paints the screen?
+
+### Practical coding question
+
+* Create an employee form with name, username, phone number, and city.
+
+* Display employee details in a table.
+
+* Implement the Add employee operation.
+
+* Implement the Delete employee operation.
+
+* Implement the Edit/Update employee operation.
+
+* Use basic React state to implement CRUD operations without much CSS.
+
+This list contains the questions and coding tasks from today's interview discussion, without answers, so you can practise speaking them aloud.
+
+------------------
+Bupa first rond
+
+Here are the exact interview questions the interviewer asked you today, based on the conversation. I’ve kept only the questions, without answers or additional practice questions.
+
+### React and frontend
+
+* How would you investigate and optimize unnecessary component re-renders?
+
+* A React application displays 10,000 devices with live status updates. How would you keep the UI responsive?
+
+* How would you integrate a REST API using Axios in React?
+
+* How do you handle access tokens when integrating a third-party API?
+
+* What is the difference between WebSocket and REST API, and when would you use each?
+
+* A third-party API returns HTTP 429 and intermittently HTTP 503. How would you build a resilient integration?
+
+* How would you improve the overall performance of an e-commerce website?
+
+* What is the difference between `any`, `unknown`, and `never`?
+
+* What is the difference between `interface` and `type` in TypeScript?
+
+* TypeScript types are different from runtime structures. How do you handle runtime validation?
+
+* How would you show HSI, HSIN, client, and ring on the product page?
+
+### Node.js, APIs and microservices
+
+* Several APIs are called to render one dashboard. How would you reduce latency and improve reliability?
+
+* Two requests attempt to reserve the same device or resource simultaneously. How would you prevent duplicate reservations and maintain consistency?
+
+* How would you model an order workflow with states such as pending, paid, shipped, and cancelled?
+
+* A downstream service becomes slow, causing cascading failures across microservices. How would you prevent this?
+
+* How would you maintain consistency between inventory and order services without distributed database transactions?
+
+* How would you divide a B2B commerce application into microservices?
+
+* How would you use load balancing and call splitting in an application?
+
+* How would you investigate a slow frontend when a backend API takes three seconds to respond and users report intermittent failures? Explain the debugging order from browser to backend and database.
+
+### Architecture and technical problem-solving
+
+* How would you handle dependency conflicts in a React microfrontend application?
+
+* How do microservices communicate with each other?
+
+* How would you prevent a race condition when multiple Java threads try to reserve the last available inventory item?
+
+### Communication and stakeholder management
+
+* How would you explain a technically complex project to a non-technical stakeholder?
+
+* A senior stakeholder demands a solution that your team believes introduces significant technical risk. How would you respond?
+
+### Closing question
+
+25\. Do you have any feedback for me or suggestions for improvement?
+
+Total: 25 questions.
+
+-----------------------
+second round
+
+### Interview questions you shared
+
+* What is microfrontend architecture?
+
+* How do you integrate different applications in a microfrontend architecture?
+
+* How do you integrate the frontend with the backend?
+
+* What will you do if the backend does not expose an API?
+
+* What is React Router?
+
+* How do you manage sessions and data in a React application?
+
+* How do you persist data across multiple steps in an onboarding process?
+
+* How would you develop a To-Do application for managers and employees?
+
+* How would you allow managers and employees to see and update the same tasks?
+
+* What is semantic HTML?
+
+* What are the different types of browser storage?
+
+* How can a user remain logged in after closing and reopening the browser?
+
+* What is SSO?
+
+* How does SSO work across multiple applications?
+
+* How do you secure a web application at runtime?
+
+* How do you handle security in a multi-tenant application?
+
+* What is the Same-Origin Policy?
+
+* What is CORS?
+
+* How would you optimize a news or content-heavy website?
+
+* How do you improve website loading speed?
+
+* How do you measure frontend performance?
+
+* What are Core Web Vitals?
+
+* How do you measure page load time?
+
+* What is the difference between `DOMContentLoaded` and the `load` event?
+
+* Explain the process from local development to QA deployment.
+
+* What checks do you perform before pushing code?
+
+* What testing phases do you perform before merging code?
+
+* What are the responsibilities of a Senior Engineer / Tech Lead?
+
+* How do you handle project delays?
+
+* How do you manage stakeholder pressure?
+
+* How do you handle disagreements with a senior colleague?
+
+* Where do you see yourself in the next few years?
+
+Note: These are the questions identifiable from the interview conversation. I have excluded the extra practice questions and detailed subtopics from my previous list. Some wording is reconstructed from your voice dictation, not guaranteed verbatim.
+
+
+--------------------------
+
+
+1. vive codeing
+2. if nw project wil come how will you handle that if us have 20 user soried hpw will you make that
+3. hoiw u have achiee micro front end in cisco what is your approach for this
+4.  whit is thatllm project
+5. how you scale webscoket project mutile connect how have u ahndeled
+
+6.end to end process for depeloyment life cycle
+
+
+import { Injectable, signal, WritableSignal } from '@angular/core';
+import { Subject, Observable, Subscription } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+
+interface DeviceStatus {
+  deviceId: string;
+  status: 'ONLINE' | 'OFFLINE' | 'DEGRADED';
+  latency: number;
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SharedDeviceStateService {
+  // 1. Reactive stream for raw telemetry updates
+  private telemetryStream$ = new Subject<DeviceStatus>();
+  
+  // 2. Angular Signal exposing the latest degraded device for the UI
+  public latestDegradedDevice = signal<DeviceStatus | null>(null);
+
+  private streamSubscription: Subscription;
+
+  constructor() {
+    // Subscribe to telemetry and update signals
+    this.streamSubscription = this.telemetryStream$.pipe(
+      tap(device => {
+        if (device.status === 'DEGRADED') {
+          // Update our state signal
+          this.latestDegradedDevice.set(device);
+        }
+      })
+    ).subscribe();
+  }
+
+  // Called by the host application to feed real-time telemetry
+  public emitTelemetry(status: DeviceStatus): void {
+    this.telemetryStream$.next(status);
+  }
+
+  // Remote federated micro-frontends use this to listen to status changes
+  public getStatusStream(): Observable<DeviceStatus> {
+    // Return the stream directly to consumers
+    return this.telemetryStream$;
+  }
+}
  
+
+Manisha, below is an Angular 19 service implemented in a host application that is designed to share real-time network device status updates with a federated remote micro-frontend. It uses RxJS and Angular Signals for reactive updates.
+While this code compiles and works fine with one or two devices, it contains 5 critical bugs or architectural anti-patterns that lead to memory leaks, race conditions, performance degradation under high event frequency, and broken state isolation. Walk me through line-by-line what is wrong and how you would fix it
+-----------  
 
 
